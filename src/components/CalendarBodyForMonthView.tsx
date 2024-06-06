@@ -124,11 +124,15 @@ function _CalendarBodyForMonthView<T>({
                       return [
                         ...elements,
                         index > maxVisibleEventCount - 1 ? (
-                          <Text style={{ fontSize: 11, marginTop: 2, fontWeight: 'bold' }}>
+                          <Text
+                            key={index}
+                            style={{ fontSize: 11, marginTop: 2, fontWeight: 'bold' }}
+                          >
                             {events.length - maxVisibleEventCount} More
                           </Text>
                         ) : (
                           <CalendarEventForMonthView
+                            key={index}
                             event={event}
                             eventCellStyle={eventCellStyle}
                             onPressEvent={onPressEvent}
