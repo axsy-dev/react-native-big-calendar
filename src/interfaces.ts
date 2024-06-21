@@ -11,7 +11,9 @@ interface ICalendarEventBase<T> {
     event: ICalendarEvent<T>,
     touchableOpacityProps: CalendarTouchableOpacityProps,
   ) => ReactElement | null
-  /** a unique key must be provided if the consumer lib wants to re-order events */
+  /**
+   * a unique key must be provided if the consumer lib wants to re-order events
+   */
   uniqueKey?: string;
 }
 
