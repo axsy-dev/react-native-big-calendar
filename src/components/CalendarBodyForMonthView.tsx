@@ -121,7 +121,7 @@ function _CalendarBodyForMonthView<T>({
                       if (index > maxVisibleEventCount) {
                         return elements
                       }
-                      const key = event.uniqueKey || `${index}`;
+                      const key = event.uniqueKey || index;
                       return [
                         ...elements,
                         index > maxVisibleEventCount - 1 ? (
